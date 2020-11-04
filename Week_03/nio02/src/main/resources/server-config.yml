@@ -1,0 +1,13 @@
+server:
+  port: 8081
+proxystrategy: "weight"
+proxyservers:
+  - address: "http://127.0.0.1:8082"
+    weight: 40
+  - address: "http://127.0.0.1:8083"
+    weight: 60
+filters:
+  - "io.github.kimmking.gateway.filter.HttpRequestHeaderFilter"
+
+
+
