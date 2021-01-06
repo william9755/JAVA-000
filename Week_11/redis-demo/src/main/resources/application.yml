@@ -1,0 +1,27 @@
+server:
+  port: 8080
+
+spring:
+  redis:
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+    password:
+    jedis:
+      pool:
+        max-active: 100
+        max-idle: 20
+        min-idle: 5
+    timeout: 100
+  session:
+    store-type: none
+
+cus:
+  redislock:
+    lock-key: lockKey
+    lock-timeout: 999999
+    internal-lock-lease-time: 30000
+  idworker:
+    worker-id: 1
+    datacenter-id: 1
+    sequence: 100
